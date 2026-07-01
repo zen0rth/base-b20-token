@@ -1,0 +1,20 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc = "0.8.20"
+
+# Base network configuration
+[profile.default.dependency]
+base = true
+
+# Libraries and dependencies
+[dependency]
+base-std = { git = "https://github.com/base-org/base-std", branch = "main" }
+
+[rpc_endpoints]
+base = "https://mainnet.base.org"
+base-sepolia = "https://sepolia.base.org"
+
+[etherscan]
+base = { key = "${BASESCAN_API_KEY}" }

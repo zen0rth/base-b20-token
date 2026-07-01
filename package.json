@@ -1,0 +1,22 @@
+{
+  "name": "base-b20-token",
+  "version": "1.0.0",
+  "description": "Base B20 token deployment project using Foundry",
+  "keywords": [
+    "base",
+    "b20",
+    "token",
+    "foundry",
+    "solidity",
+    "ethereum"
+  ],
+  "author": "zen0rth",
+  "license": "MIT",
+  "scripts": {
+    "build": "forge build",
+    "test": "forge test",
+    "clean": "forge clean",
+    "deploy:testnet": "forge script src/CreateToken.s.sol:CreateToken --rpc-url $BASE_SEPOLIA_RPC_URL --broadcast --verify",
+    "deploy:mainnet": "forge script src/CreateToken.s.sol:CreateToken --rpc-url $BASE_RPC_URL --broadcast --verify"
+  }
+}
